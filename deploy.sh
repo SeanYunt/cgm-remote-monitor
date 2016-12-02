@@ -107,6 +107,10 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
   exitWithMessageOnError "Kudu Sync failed"
 fi
 
+#hacking to fix missing module 'q'
+npm install q
+
+
 # 2. Select node version
 selectNodeVersion
 
